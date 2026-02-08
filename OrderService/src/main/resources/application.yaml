@@ -31,3 +31,7 @@ spring:
   liquibase:
     change-log: classpath:db/changelog/db.changelog-master.xml
     enabled: true
+
+inventory-service:
+  url: http://localhost:8081/api/v1/inventory
+  update-url: ${inventory-service.url}/update
