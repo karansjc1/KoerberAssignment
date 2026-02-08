@@ -1,4 +1,4 @@
-package com.assignment.InventoryService;
+package com.assignment.InventoryService.service;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,8 +9,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import com.assignment.InventoryService.persistence.entity.InventoryBatch;
 import com.assignment.InventoryService.persistence.repository.InventoryRepository;
-import com.assignment.InventoryService.service.StandardInventoryProcessor;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
