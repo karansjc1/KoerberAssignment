@@ -67,9 +67,39 @@ cd ..
 
 ## 🏃‍♂️ Running the Applications
 
-You need to run both services simultaneously. Open two terminal windows:
+You have two options to run both services:
 
-### Terminal 1: Start Inventory Service
+### Option 1: Automated Script (Recommended)
+
+The easiest way is to use the startup scripts that automatically launch both services:
+
+#### Windows (PowerShell or Command Prompt):
+
+```bash
+.\start-services.bat
+```
+
+#### Linux/Mac (Bash):
+
+```bash
+chmod +x start-services.sh
+./start-services.sh
+```
+
+**What the scripts do:**
+
+- Automatically start the Inventory Service on port 8081
+- Wait 5 seconds, then start the Order Service on port 8082
+- Open the services in separate terminal windows
+- Display the Swagger UI URLs for easy access
+
+---
+
+### Option 2: Manual Setup (Two Terminal Windows)
+
+If you prefer to run the services manually, open two separate terminal windows:
+
+#### Terminal 1: Start Inventory Service
 
 ```bash
 cd InventoryService
@@ -84,7 +114,7 @@ mvn spring-boot:run
 - JDBC URL: `jdbc:h2:mem:inventorydb`
 - User/Pass: `sa` / `password`
 
-### Terminal 2: Start Order Service
+#### Terminal 2: Start Order Service
 
 ```bash
 cd OrderService
