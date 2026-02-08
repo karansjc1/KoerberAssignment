@@ -2,13 +2,13 @@
 
 ## Overview
 
-The **Inventory Service** is a Spring Boot application responsible for managing product inventory batches and their expiry dates[cite: 13, 14]. It is designed with the **Factory Design Pattern** to allow for future extensibility of inventory handling logic.
+The **Inventory Service** is a Spring Boot application responsible for managing product inventory batches and their expiry dates. It is designed with the **Factory Design Pattern** to allow for future extensibility of inventory handling logic.
 
 **Key Features:**
 
 - **Batch Management:** Tracks multiple batches per product with specific expiry dates.
-- **FEFO Logic:** Retrieves batches sorted by expiry date (First Expiry, First Out).
-- **Factory Pattern:** Decouples business logic execution from the controller to support multiple inventory strategies[cite: 37].
+- **Retrieval Logic:** Retrieves batches sorted by expiry date.
+- **Factory Pattern:** Decouples business logic execution from the controller to support multiple inventory strategies.
 - **Liquibase:** Automated database schema creation and CSV data loading on startup.
 
 ---

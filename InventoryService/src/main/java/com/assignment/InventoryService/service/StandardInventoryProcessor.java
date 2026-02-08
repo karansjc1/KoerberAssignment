@@ -28,7 +28,7 @@ public class StandardInventoryProcessor implements InventoryProcessor {
     @Override
     @Transactional
     public void updateStock(Long productId, int quantity) {
-        // Logic to deduct quantity from batches (FEFO - First Expiry First Out)
+        // Logic to deduct quantity from batches in the order of expiry date
         List<InventoryBatch> batches = getBatches(productId);
         int remainingToDeduct = quantity;
 
